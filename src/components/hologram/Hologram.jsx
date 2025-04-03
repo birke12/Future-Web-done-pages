@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from "./hologram.module.css";
 import { ReactTyped } from "react-typed";
 import { HashLink } from "react-router-hash-link";
+import helenavoice from './helenavoice.mp3';
 
 export default function HologramEffect({ src }) {
   const [showChatbox, setShowChatbox] = useState(false);
@@ -83,11 +84,7 @@ export default function HologramEffect({ src }) {
       <img src={src} alt="Hologram" className={styles.hologram} />
 
       {/* Audio element for playing the MP3 file */}
-      <audio
-        ref={audioRef}
-        src="/assets/images/helenavoice.mp3"
-        preload="auto"
-      />
+      <audio ref={audioRef} src={helenavoice} preload="auto" />
 
       <div
         ref={chatboxRef}

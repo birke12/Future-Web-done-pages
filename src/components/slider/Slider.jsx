@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import styles from "./Slider.module.css";
 import { HashLink } from "react-router-hash-link"; // Import for linking
 
+
 const Slider = () => {
   const [articles, setArticles] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    fetch("/data/webarticles.json") // Load data dynamically
+    fetch('/data/webarticles.json') // Load data dynamically
       .then((response) => response.json())
       .then((data) => setArticles(data))
       .catch((error) => console.error("Error loading articles:", error));

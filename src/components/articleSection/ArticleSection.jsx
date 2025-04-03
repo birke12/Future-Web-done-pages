@@ -6,7 +6,7 @@ const ArticleSection = ({ jsonPath }) => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetch("/data/webarticles.json") // Load JSON dynamically based on prop
+    fetch('/data/webarticles.json') // Load JSON dynamically based on prop
       .then((response) => response.json())
       .then((data) => setArticles(data))
       .catch((error) => console.error("Error loading articles:", error));
