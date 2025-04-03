@@ -1,6 +1,9 @@
 import Button from "../button/Button";
 import styles from "./pageHeader.module.css";
 import { ReactTyped } from "react-typed";
+import web1Video from "../public/assets/video/web1.mp4";
+import web3Video from "../public/assets/video/web3.mp4";
+
 
 const PageHeader = ({ title, subTitle, headerType }) => {
   return (
@@ -17,7 +20,7 @@ const PageHeader = ({ title, subTitle, headerType }) => {
       {headerType === "home" && (
         <>
           <video autoPlay muted loop className={styles.videoBackground}>
-            <source src="/assets/video/web1.mp4" type="video/mp4" />
+            <source src={web1Video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
@@ -43,7 +46,7 @@ const PageHeader = ({ title, subTitle, headerType }) => {
       {headerType === "article" && (
         <>
           <video autoPlay muted loop className={styles.videoBackground}>
-            <source src="/assets/video/web3.mp4" type="video/mp4" />
+            <source src={web3Video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 

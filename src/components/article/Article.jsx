@@ -1,5 +1,9 @@
 import PageHeader from "../pageHeader/PageHeader";
 import styles from "./article.module.css";
+import webImage1 from "../public/assets/images/webImage1.jpg";
+import webVoice from "../public/assets/images/webVoice.jpg";
+import blockweb from "../public/assets/images/blockweb.jpg";
+import websus2 from "../public/assets/images/websus2.jpg";
 
 const Article = ({ articleText }) => {
   return (
@@ -23,7 +27,7 @@ const Article = ({ articleText }) => {
             {/* Text Content */}
             <p className={styles.text}>
               <img
-                src="../public/assets//images/webImage1.jpg"
+                src={webImage1}
                 alt="Webdev"
                 className={styles.image}
               />
@@ -96,7 +100,7 @@ const Article = ({ articleText }) => {
 
             <p className={styles.text}>
               <img
-                src="../public/assets//images/webVoice.jpg"
+                src={webVoice}
                 alt="Webdev"
                 className={styles.image}
               />
@@ -463,7 +467,7 @@ const Article = ({ articleText }) => {
           </div>
           <p className={styles.text}>
             <img
-              src="../public/assets//images/blockweb.jpg"
+              src={blockweb}
               alt="Webdev"
               className={styles.image}
             />
@@ -626,7 +630,7 @@ const Article = ({ articleText }) => {
           </div>
           <p className={styles.text}>
             <img
-              src="../public/assets//images/websus2.jpg"
+              src={websus2}
               alt="Webdev"
               className={styles.image}
             />
