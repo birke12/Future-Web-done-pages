@@ -1,9 +1,9 @@
 import PageHeader from "../pageHeader/PageHeader";
 import styles from "./article.module.css";
-import webImage1 from "../public/assets/images/webImage1.jpg";
-import webVoice from "../public/assets/images/webVoice.jpg";
-import blockweb from "../public/assets/images/blockweb.jpg";
-import websus2 from "../public/assets/images/websus2.jpg";
+import webImage1 from "../../assets/images/webImage1.jpg";
+import webVoice from "../../assets/images/webVoice.jpg";
+import blockweb from "../../assets/images/blockweb.jpg";
+import websus2 from "../../assets/images/websus2.jpg";
 
 const Article = ({ articleText }) => {
   return (
