@@ -18,7 +18,7 @@ function Home() {
         title="Fremtidens Web Udvikling"
         /* headerImg={headerImg} */
       />
-      <HologramImage src="/assets/images/Holo3.png" />
+       <HologramImage src={require("../../assets/images/Holo3.png")} />
       <Introduction />
       <Slider />
       <ArticleSection />
