@@ -1,7 +1,7 @@
 import ArticleSection from "../components/articleSection/ArticleSection.jsx";
 /* import Introduktion from "../components/introduction/Introduction"; */
 import PageHeader from "../components/pageHeader/PageHeader";
-import HologramImage from "../components/hologram/Hologram.jsx";
+import HoloImage from "../../assets/images/Holo3.png";  // Import image
 
 import Slider from "../components/slider/Slider.jsx";
 
@@ -18,11 +18,10 @@ function Home() {
         title="Fremtidens Web Udvikling"
         /* headerImg={headerImg} */
       />
-       <HologramImage src={require("../../assets/images/Holo3.png")} />
+      <HologramImage src={HoloImage} />  {/* Use the imported image */}
       <Introduction />
       <Slider />
       <ArticleSection />
-      
     </>
   );
 }
