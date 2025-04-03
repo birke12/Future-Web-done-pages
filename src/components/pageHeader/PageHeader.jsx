@@ -1,8 +1,9 @@
 import Button from "../button/Button";
 import styles from "./pageHeader.module.css";
 import { ReactTyped } from "react-typed";
-import web1Video from "../public/assets/video/web1.mp4";
-import web3Video from "../public/assets/video/web3.mp4";
+import web1Video from "../../assets/video/web1.mp4";
+import web3Video from "../../assets/video/web3.mp4";
+
 
 
 const PageHeader = ({ title, subTitle, headerType }) => {
