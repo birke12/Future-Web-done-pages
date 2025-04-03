@@ -1,0 +1,44 @@
+.socialFollowContainer {
+  text-align: center;
+  margin-top: 130px;
+  position: relative;
+  z-index: 10;
+  background-color: transparent; /* Ensure background is transparent */
+  transition: background-color 0.7s ease; /* Smooth background transition */
+  margin-bottom: 130px;
+}
+
+/* Style for social title */
+.socialTitle {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: rgb(255, 228, 211); /* Soft color like navbar */
+  font-family: "Oxanium", serif;
+  font-weight: 600;
+  text-shadow: 0 0 5px rgb(255, 98, 0), 0 0 15px rgb(255, 98, 0); /* Add text-shadow */
+}
+
+/* Social icon container */
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  color: rgb(255, 217, 188); /* Light color */
+  transition: color 0.3s;
+}
+
+/* Individual social icons */
+.socialIcon {
+  font-size: 40px;
+  color: rgb(255, 217, 188);
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin: 20px;
+  z-index: 999;
+}
+
+/* Hover effect for social icons */
+.socialIcon:hover {
+  color: #eccf90; /* Hover color like in navbar */
+  transform: scale(1.1); /* Slight zoom effect */
+  z-index: 1000; /* Ensure it's on top during hover */
+}

@@ -1,0 +1,144 @@
+.homePageHeader {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1; /* Lower than navbar, so it sits behind */
+  margin-top: -5px; /* Add margin to push the header down below the navbar, adjust the value depending on the navbar height */
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers the entire header */
+  z-index: 1; /* Places video behind content */
+}
+
+.matrixBg {
+  position: relative;
+  z-index: 2; /* Ensures text is above video */
+  text-align: center;
+}
+
+.animatedTyping {
+  font-size: 24px; /* Make sure the text is large enough to be visible */
+  color: white; /* Ensure text color contrasts with the background */
+  position: relative;
+  z-index: 10; /* Make sure the text is not hidden behind other elements */
+  color: rgb(255, 237, 219);
+  font-size: 80px;
+  font-family: "Oxanium", serif;
+  position: relative;
+  text-shadow: 0 0 10px rgb(255, 98, 0), 0 0 20px rgb(255, 98, 0),
+    0 0 30px rgb(255, 98, 0);
+  z-index: 2; /* Ensure it stays above the rain effect */
+}
+
+.title {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Apply glitch effect */
+.title::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: glitch 2s infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-2px, -2px);
+  color: rgb(255, 168, 97);
+  text-shadow: 0 0 5px rgb(255, 98, 0), 0 0 15px rgb(255, 98, 0);
+  filter: blur(2px) contrast(1000%) grayscale(100%) pixelate(5px); /* Apply the same pixelation effect here */
+}
+
+/* Animation for the rain effect */
+@keyframes rain {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Glitch effect for the text */
+@keyframes glitch {
+  0%,
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    transform: translate(0);
+  }
+  33% {
+    clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%);
+    transform: translate(-5px, -5px);
+  }
+  66% {
+    clip-path: polygon(0 85%, 100% 85%, 100% 100%, 0 100%);
+    transform: translate(5px, 5px);
+  }
+}
+
+.homePageHeader {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  color: white;
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.textContainer {
+  text-align: center;
+  position: relative;
+  z-index: 2; /* Ensure it's above the video */
+ 
+}
+
+/* .animatedTyping {
+  font-size: 24px;
+  color: rgb(255, 237, 219);
+  font-size: 80px;
+  font-family: "Oxanium", serif;
+  text-shadow: 0 0 10px rgb(255, 98, 0), 0 0 20px rgb(255, 98, 0),
+    0 0 30px rgb(255, 98, 0);
+  z-index: 2;
+} */
+
+/* NEW: Ensure the button is positioned below the text */
+.buttonContainer {
+  position: absolute;
+  bottom: 32vh; /* Reduce this value to make it closer to the text */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .animatedTyping {
+    font-size: 34px;
+  }
+}

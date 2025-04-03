@@ -1,0 +1,370 @@
+.navbar {
+  position: fixed;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgb(0, 0, 0, 0.0);
+  /* border-bottom: 1px solid #e0e0e0; */
+  color: #000000;
+  font-size: 16px;
+  height: 50px;
+    top: 0;
+  /* left: 0; */
+  width: 100%;
+  z-index: 10; /* Higher than the header to ensure it's on top */
+  transition: background-color 0.7s ease;
+}
+
+/* Add background color when scrolled */
+/* .navbar.scrolled {
+  background-color: rgb(29, 28, 28, 0.95); 
+} */
+
+a{
+  text-decoration: none;
+}
+
+
+
+.logo-container {
+display: flex;
+text-decoration: none;
+}
+
+@font-face {
+  font-family: 'Magnetar';  /* Name of the font */
+  src: url('/assets/fonts/Magnetar.otf') format('opentype');  /* Path to the .otf file */
+  font-weight: lighter;
+  font-style: normal;
+}
+.ancient-logo {
+color: rgb(255, 238, 225);
+  text-shadow: 0 0 5px rgb(255, 98, 0), 0 0 15px rgb(255, 98, 0);
+text-decoration: none;
+ font-family: 'Magnetar', sans-serif;
+  src: url('/assets/fonts/Magnetar.otf') format('opentype');
+font-size: 1.4rem;
+font-weight: 500;
+
+}
+.journeys-logo {
+  color: rgb(255, 238, 225);
+  text-shadow: 0 0 5px rgb(255, 98, 0), 0 0 15px rgb(255, 98, 0);
+  text-decoration: none;
+  margin-left: 5px;
+ font-family: 'Magnetar', sans-serif;
+  src: url('/assets/fonts/Magnetar.otf') format('opentype');
+  font-size: 1.4rem;
+  font-weight: 500;
+  
+  
+}
+
+
+.burger-menu {
+  position: fixed; /* Make it fixed to the viewport */
+  right: -0.6rem; /* Increase this value to move it further right */
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  z-index: 999;
+  cursor: pointer;
+  margin-top: 12px; /* Adjust the top margin if needed */
+}
+
+.logo1 {
+  height: 30px;
+  width: 100%;
+  color: rgb(255, 168, 97);
+  text-shadow: 0 0 5px rgb(255, 98, 0), 0 0 15px rgb(255, 98, 0);
+}
+
+.socialIcon {
+  color: rgb(255, 217, 188);
+  text-shadow: 0 0 5px rgb(255, 98, 0), 0 0 15px rgb(255, 98, 0);
+ /*  padding-left: 10px;
+ padding-top: 4px; */
+margin-left: 10px;
+margin-top: 1px;
+ z-index: 999;
+}
+.socialIcon:hover {
+  color: #ffe6b1;
+  margin-left: 10px;
+margin-top: 1px;
+ z-index: 999;
+}
+
+.socialIconContainer {
+  margin: 0 auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  z-index: 200;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  background-color: rgb(33, 32, 32);
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+
+  &.open {
+    display: flex;
+  }
+
+  li {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+    a {
+      color: rgb(255, 168, 97);
+  text-shadow: 0 0 5px rgb(255, 98, 0), 0 0 15px rgb(255, 98, 0);
+      text-decoration: none;
+      display: block;
+      position: relative;
+      transition: color 0.3s;
+      font-size: 16px;
+      font-weight: 500;
+
+      &:hover {
+        color: #ffe8ba;
+      }
+
+      &:after {
+        content: "";
+        position: relative;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(255, 255, 255);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-out;
+      }
+
+      &:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
+}
+
+.active {
+  color: rgb(255, 255, 255);
+}
+
+@media (min-width: 768px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex; /* Make nav links visible */
+    flex-direction: row; /* Horizontal layout for desktop */
+    position: relative; /* Ensure links stay inside the navbar */
+    width: auto; /* Ensure width adjusts based on content */
+    background-color: transparent; /* Transparent background for desktop */
+
+    li {
+      padding: 0;
+      margin: 0 1rem;
+
+      a {
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    height: 100vh;
+    padding-top: 160px; /* Add padding from the top */
+    position: fixed;
+  }
+
+  ul {
+    margin-top: 0; /* Reset any conflicting margin from ul */
+  }
+
+  a {
+    font-size: 30px;
+    font-family: "Quicksand", serif;
+    font-weight: 300;
+  }
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+  }
+}
+
+/* Ensure all dropdown items are aligned to the left */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 195%;
+  left: 0;
+  background-color: #292424;
+  list-style: none;
+  padding: 10px 0;
+  min-width: 150px;
+  border-radius: 0px;
+  z-index: 1000;
+  color: white;
+  text-align: left; /* Ensure text is left-aligned */
+  border-top: solid 1px #ffe6b1;
+}
+
+.dropdown-toggle {
+  /*  padding-top: 40px;  */
+  padding-bottom: 40px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.dropdown-toggle:hover {
+  color: #ffe6b1;
+}
+.dropdown-toggle-greece {
+  /* padding-top: 40px;  */
+  padding-bottom: 40px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.dropdown-toggle-greece:hover {
+  /* padding-top: 40px;  */
+  color: #ffe6b1;
+}
+
+.dropdown-menu li {
+  padding: 10px 15px; /* Add some padding for spacing */
+  text-align: left; /* Align text inside the list item */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.dropdown-menu li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  width: 100%; /* Ensure full width is clickable */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Greece Dropdown (Opens on Hover) */
+.hover-dropdown {
+  position: relative;
+}
+
+/* Move Greece Submenu Further to the Right */
+.hover-dropdown .sub-menu {
+  display: none;
+  position: absolute;
+  left: calc(100%); /* Moves it slightly right */
+  top: -5px; /* Moves it up slightly for a seamless transition */
+  background-color: #292424;
+  min-width: 150px;
+  border-radius: 3px;
+  text-align: left;
+  padding: 5px 0;
+}
+
+/* Ensure the submenu remains visible when hovered */
+.hover-dropdown:hover > .sub-menu,
+.hover-dropdown .sub-menu:hover {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .dropdown-menu {
+    display: none; /* Keep it hidden by default */
+    position: static; /* Remove absolute positioning */
+    background-color: #292424;
+    width: 100%; /* Full width */
+    text-align: left;
+    border-bottom: solid 1px #ffe6b1;
+  }
+
+  .dropdown.open > .dropdown-menu {
+    display: block; /* Show when open class is added */
+  }
+
+  .dropdown-menu li {
+    padding: 0px;
+    text-align: center;
+  }
+}
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown-toggle {
+  padding: 10px;
+     color: rgb(255, 247, 240);
+  text-shadow: 0 0 5px rgb(255, 98, 0), 0 0 15px rgb(255, 98, 0);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.dropdown-toggle:hover {
+  color: #ffe6b1;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(32, 32, 32, 0.2);
+  list-style: none;
+  padding: 10px 0;
+  min-width: 150px;
+  border-radius: 3px;
+  z-index: 1000;
+      color: rgb(255, 168, 97);
+  text-shadow: 0 0 5px rgb(255, 98, 0), 0 0 15px rgb(255, 98, 0);
+  text-align: left;
+  border-top: solid 1px #ffe6b1;
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.dropdown-menu li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+}
+
+.dropdown-menu li a:hover {
+  color: #ffe6b1;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}

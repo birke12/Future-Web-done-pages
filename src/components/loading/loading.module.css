@@ -1,0 +1,25 @@
+.loader {
+  margin: 0 auto;
+  width: 160px;
+  height: 40px;
+  border-radius: 20px;
+  background:
+    radial-gradient(farthest-side, rgb(255, 98, 0) 94%, transparent) left/40px 40px no-repeat
+    rgb(0, 0, 0, 0.1); /* Match article title color */
+  animation: l2 1s infinite linear;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgb(255, 98, 0), 0 0 20px rgb(255, 98, 0), 0 0 30px rgb(255, 98, 0); /* Glow effect */
+}
+
+@keyframes l2 {
+  50% { background-position: right; }
+}
+
+.loaderContainer {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

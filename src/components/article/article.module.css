@@ -1,0 +1,274 @@
+/* Base Styles for Desktop and Larger Screens */
+
+
+
+
+.articleContainer {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  margin-top: 50px;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: rgb(29, 28, 28);
+  margin-bottom: 70px;
+}
+
+.innerContainer {
+  position: relative;
+  width: 100%; /* Full width */
+  max-width: 900px; /* Adjust as needed */
+  color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 0 auto;
+}
+
+
+.headerContainer {
+  margin-top: 120px;
+  margin-bottom: 60px;
+}
+
+.sectionTitle {
+  margin-top: 50px;
+  margin-bottom: 15px;
+  color: rgb(106, 171, 232);
+}
+
+.smallTitle {
+   color: rgb(251, 209, 111);
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+.boldTitle {
+  font-size: 20px; /* Make it bigger */
+  color: rgb(251, 209, 111);
+  font-weight: bold; /* Make it bold */
+  display: inline-flex; /* Keep bullet and title inline */
+  align-items: center;
+}
+
+.boldTitle::before {
+  content: "•"; /* Bullet point */
+    color: rgb(251, 209, 111);
+  font-size: 20px;
+  margin-right: 8px;
+
+}
+.boldTitleNum1 {
+  font-size: 20px; /* Make it bigger */
+  color: rgb(251, 209, 111);
+  font-weight: bold; /* Make it bold */
+  display: inline-flex; /* Keep bullet and title inline */
+  align-items: center;
+}
+
+.boldTitleNum1::before {
+  content: "1."; /* Bullet point */
+    color: rgb(251, 209, 111);
+  font-size: 20px;
+  margin-right: 8px;
+
+}
+.boldTitleNum2 {
+  font-size: 20px; /* Make it bigger */
+  color: rgb(251, 209, 111);
+  font-weight: bold; /* Make it bold */
+  display: inline-flex; /* Keep bullet and title inline */
+  align-items: center;
+}
+
+.boldTitleNum2::before {
+  content: "2."; /* Bullet point */
+    color: rgb(251, 209, 111);
+  font-size: 20px;
+  margin-right: 8px;
+
+}
+.boldTitleNum3 {
+  font-size: 20px; /* Make it bigger */
+  color: rgb(251, 209, 111);
+  font-weight: bold; /* Make it bold */
+  display: inline-flex; /* Keep bullet and title inline */
+  align-items: center;
+}
+
+.boldTitleNum3::before {
+  content: "3."; /* Bullet point */
+    color: rgb(251, 209, 111);
+  font-size: 20px;
+  margin-right: 8px;
+
+}
+.boldTitleNum4 {
+  font-size: 20px; /* Make it bigger */
+  color: rgb(251, 209, 111);
+  font-weight: bold; /* Make it bold */
+  display: inline-flex; /* Keep bullet and title inline */
+  align-items: center;
+}
+
+.boldTitleNum4::before {
+  content: "4."; /* Bullet point */
+    color: rgb(251, 209, 111);
+  font-size: 20px;
+  margin-right: 8px;
+
+}
+
+.videoContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 90px;
+}
+.video {
+   float: right; /* Float the image to the right */
+  width: 100%; /* Full width */
+  max-width: 420px; /* Set a maximum width for the image */
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h1 {
+    color: rgb(255, 228, 211);
+  text-shadow: 0 0 10px rgb(255, 98, 0), 0 0 20px rgb(255, 98, 0),
+    0 0 30px rgb(255, 98, 0);
+  font-size: 26px;
+}
+
+.articleSection {
+  margin-top: 100px;
+}
+
+/* Image Classes (float for desktop) */
+.image, .imageLeft {
+  float: right; /* Float the image to the right */
+  width: 100%; /* Full width */
+  max-width: 420px; /* Set a maximum width for the image */
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  padding-bottom: 20px;
+}
+.image {
+  margin-left: 20px;
+}
+
+
+.imageLeft {
+  float: left; /* Float the image to the left */
+  margin-right: 1.5rem;
+}
+
+.heading {
+  font-size: 2.275rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 150px;
+  font-family: "Oxanium", serif;
+  text-align: center; /* Center the heading */
+}
+
+.text {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.text strong {
+  font-weight: bold;
+}
+
+/* Media Queries */
+
+/* For Desktop and Larger Screens (default behavior) */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 27px;
+    text-align: center;
+    max-width: 100%; /* Full width */
+  }
+
+  .image, .imageLeft {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%; /* Ensure the images are fully responsive */
+  }
+
+  .articleContainer {
+    padding: 1rem; /* Reduce padding for smaller screens */
+    margin-top: 20px; /* Adjust the top margin */
+  }
+
+  .innerContainer {
+    padding: 1rem; /* Adjust padding */
+  }
+
+  .text {
+    display: block; /* Makes sure the text content is block-level */
+    margin-bottom: 1.5rem;
+  }
+
+  .videoContainer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .sectionTitle, .smallTitle {
+    text-align: center;
+  }
+}
+
+/* For Mobile (screens below 768px) */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 24px;
+    text-align: center; /* Ensure heading is centered on mobile */
+  }
+
+  /* Switch to block for mobile */
+  .image, .imageLeft {
+    float: none; /* Remove float for mobile */
+    display: block; /* Make images block-level */
+    width: 100%; /* Ensure images take full width */
+    max-width: 100%; /* Ensure the images are fully responsive */
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 20px;
+  }
+
+  .articleContainer {
+    padding: 1rem;
+  }
+
+  .innerContainer {
+    padding: 1rem;
+    max-width: 100%; /* Full width */
+  }
+
+  .text {
+    font-size: 16px; /* Adjust text size */
+  }
+
+  .videoContainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 20px;
+    text-align: left; /* Align left on mobile */
+  }
+  h2 {
+    font-size: 18px;
+    text-align: center; /* Align title to the center */
+  }
+}

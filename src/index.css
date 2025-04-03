@@ -1,0 +1,31 @@
+@import "./styles/main.css";
+
+/* Styling the scrollbar itself */
+::-webkit-scrollbar {
+  width: 12px; /* width for vertical scrollbar */
+  height: 12px; /* height for horizontal scrollbar */
+}
+
+/* Styling the draggable part of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: #ff9800; /* Orange color */
+  border-radius: 10px;
+  border: 3px solid #fff; /* Optional: to add space around the thumb */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling the track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Optional: Styling the buttons (arrows) on the scrollbar */
+::-webkit-scrollbar-button {
+  background-color: #f1f1f1;
+}
+
+/* Styling the bottom corner (where horizontal and vertical scrollbars meet) */
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1;
+}

@@ -1,0 +1,181 @@
+.hologramContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, black, rgb(29, 28, 28));
+    position: relative;
+  }
+  
+  
+  
+  /* Hologram Styling */
+  .hologram {
+    width: 400px;
+    height: auto;
+    position: relative;
+    filter: brightness(1) contrast(1) drop-shadow(0 0 10px rgba(255, 153, 0, 0.2));
+    animation: flicker 2s infinite alternate, scanline 3s infinite linear;
+    left: -8%;
+    margin-top: 100px;
+  }
+  
+  /* Flickering effect */
+  @keyframes flicker {
+    0% { opacity: 0.7; }
+    50% { opacity: 2.1; }
+    100% { opacity: 0.8; }
+  }
+  
+  /* Glow Effect */
+  .hologram::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 10%, rgba(0, 255, 255, 0) 70%);
+    mix-blend-mode: screen;
+  }
+  
+  /* Dropdown Chatbox */
+  .chatbox {
+    position: absolute;
+    top: 150px; /* Adjust based on your preferred height */
+    left: 62%; /* Adjust the left position to shift it horizontally */
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 145, 0, 0.747);
+    font-size: 2px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    width: 250px;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in transition */
+    z-index: 100;
+    display: inline-block;
+    margin-top: 70px;
+  }
+  
+  .chatbox:hover {
+    background-color: rgba(0, 0, 0, 1);
+  }
+  
+/* Dropdown Menu */
+.dropdownMenu {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: absolute;
+    top: 40px; /* Adjust based on the height of the chatbox */
+    left: 0;
+    right: 0;
+    margin-top: 25px;
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.9); /* Slightly scale it down */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for both opacity and scale */
+    pointer-events: none; /* Prevent clicking while hidden */
+  }
+  
+  /* Show the dropdown when hovering over the chatbox */
+  .chatbox:hover .dropdownMenu {
+    opacity: 1; /* Make it visible */
+    transform: scale(1); /* Return to normal size */
+    pointer-events: auto; /* Enable interaction when visible */
+  }
+  
+  /* Links inside the dropdown */
+  .dropdownMenu a {
+    display: block;
+    padding: 10px;
+    color: rgb(255, 237, 219);
+    font-size: 14px;
+    font-family: "Oxanium", serif;
+    position: relative;
+    z-index: 10;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 10px rgb(255, 145, 0), 0 0 20px rgb(255, 123, 0), 0 0 30px rgb(255, 123, 0);
+    padding-left: 18px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-10px); /* Slightly offset to animate up */
+    animation: linkAppear 0.5s forwards; /* Apply the link animation */
+  }
+  
+  .dropdownMenu a:nth-child(1) {
+    animation-delay: 0s; /* No delay for the first link */
+  }
+  
+  .dropdownMenu a:nth-child(2) {
+    animation-delay: 0.1s; /* 0.1s delay for the second link */
+  }
+  
+  .dropdownMenu a:nth-child(3) {
+    animation-delay: 0.2s; /* 0.2s delay for the third link */
+  }
+  
+  .dropdownMenu a:nth-child(4) {
+    animation-delay: 0.3s; /* 0.3s delay for the fourth link */
+  }
+  
+  .dropdownMenu a:nth-child(5) {
+    animation-delay: 0.4s; /* 0.4s delay for the fifth link */
+  }
+  
+  .dropdownMenu a:nth-child(6) {
+    animation-delay: 0.5s; /* 0.5s delay for the sixth link */
+  }
+  
+  /* Link Animation */
+  @keyframes linkAppear {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px); /* Start slightly above */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Move to normal position */
+    }
+  }
+  
+  .dropdownMenu a:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdownMenu a:hover {
+    background-color: rgba(255, 196, 0, 0.2);
+  }
+  
+  
+  /* Show the dropdown when active */
+  .dropdownMenu.show {
+    display: block;
+  }
+  
+  /* Show the chatbox when active */
+  .chatbox.show {
+    opacity: 1; /* Fade in by setting opacity to 1 */
+  }
+  
+  /* Make the dropdown visible when hovering over the chatbox */
+  .chatbox:hover .dropdownMenu {
+    display: block;
+  }
+  
+  .animatedTyping {
+    
+    color: rgb(255, 237, 219);
+    font-size: 14px;
+    font-family: "Oxanium", serif;
+    position: relative;
+    text-shadow: 0 0 10px rgb(255, 145, 0), 0 0 20px rgb(255, 123, 0),
+      0 0 30px rgb(255, 123, 0);
+    z-index: 2; /* Ensure it stays above the rain effect */
+  }
+  

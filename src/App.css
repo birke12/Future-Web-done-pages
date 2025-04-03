@@ -1,0 +1,64 @@
+@import "./styles/_navigation.css";
+@import url('https://fonts.googleapis.com/css2?family=Oxanium&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f2f1;
+  font-size: 18px;
+  /* font-family: "Quicksand", serif; */
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Oxanium", serif;
+  
+}
+
+
+/* Styling the scrollbar itself */
+::-webkit-scrollbar {
+  width: 0.5rem; /* Vertical scrollbar width */
+  height: 0.2rem; /* Horizontal scrollbar height */
+}
+
+/* Styling the track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: #000000; /* Black background */
+}
+
+/* Styling the draggable part (thumb) of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: #ff790c;
+  border-radius: 0.5rem;
+  background: rgb(255, 108, 10);
+  background: linear-gradient(180deg, rgb(255, 123, 7) 0%, rgb(255, 119, 14) 100%);
+  border: 1px solid rgba(86, 81, 183, 0.5);
+  height: 0.2rem; /* Ensures thumb's height is thinner */
+  /* Optional: Add padding to thumb for better visuals */
+}
+
+.articleTitle {
+  background-color: rgb(29, 28, 28);
+   color: rgb(255, 228, 211);
+  text-shadow: 0 0 10px rgb(255, 98, 0), 0 0 20px rgb(255, 98, 0),
+    0 0 30px rgb(255, 98, 0);
+    text-align: center;
+    font-size: 22px;
+    
+}
+
+
+
+
+
+
+
